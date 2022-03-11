@@ -27,14 +27,14 @@
 
 // filter()
 // untuk membuat array baru yang sudah melewati validasi atau test
-const buah = ["manGGa", "apel", "manggis", "durian"];
-const cari = (para) => {
-  const hasil = buah.filter((nilai) => {
-    return nilai.toLowerCase().includes(para.toLowerCase());
-  });
-  return hasil;
-};
-console.log(cari("ma"));
+// const buah = ["manGGa", "apel", "manggis", "durian"];
+// const cari = (para) => {
+//   const hasil = buah.filter((nilai) => {
+//     return nilai.toLowerCase().includes(para.toLowerCase());
+//   });
+//   return hasil;
+// };
+// console.log(cari("ma"));
 
 // pop()
 // untuk menghapus element array terakhir

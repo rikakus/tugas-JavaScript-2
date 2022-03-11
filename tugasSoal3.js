@@ -17,7 +17,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
     console.log("Element dalam array bukan angka");
   } else if (dataArray.length < 6) {
     console.log("Jumlah angka dalam dataArray harus lebih dari 5");
-  } else if (dataArray.filter(validasi).length == []) {
+  } else if (dataArray.filter(validasi).length == 0) {
     console.log("Nilai tidak ditemukan");
   } else {
     console.log(
@@ -27,4 +27,4 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
     );
   }
 };
-seleksiNilai(15, 20, [11, 12, 13, 16, 17, 18]);
+seleksiNilai(150, 200, [11, 12, 13, 16, 17, 18]);
