@@ -31,7 +31,7 @@ const searchName = (cari, batas, cb) => {
   }
 };
 const callback = (hasil, batas) => {
-  if (hasil.slice(0, batas).length == []) {
+  if (hasil.slice(0, batas).length == 0) {
     console.log("hasil tidak ditemukan");
   } else {
     console.log(hasil.slice(0, batas));
