@@ -17,12 +17,24 @@ const name = [
   "Penelope",
 ];
 const searchName = (cari, batas, cb) => {
-  const hasil = name.filter((nama) => {
-    return nama.toLowerCase().includes(cari.toLowerCase());
-  });
-  return cb(hasil, batas);
+  if (typeof cari != "string" || cari == "") {
+    console.log("parameter cari harus string dan tidak boleh string kosong");
+  } else if (typeof batas != "number") {
+    console.log("parameter batas harus number");
+  } else if (batas <= 0) {
+    console.log("parameter batas harus lebih besar dari 0");
+  } else {
+    const hasil = name.filter((nama) => {
+      return nama.toLowerCase().includes(cari.toLowerCase());
+    });
+    return cb(hasil, batas);
+  }
 };
 const callback = (hasil, batas) => {
-  console.log(hasil.slice(0, batas));
+  if (hasil.slice(0, batas).length == []) {
+    console.log("hasil tidak ditemukan");
+  } else {
+    console.log(hasil.slice(0, batas));
+  }
 };
-searchName("an", 3, callback);
+searchName("1", 1, callback);
